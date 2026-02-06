@@ -4,7 +4,7 @@
 #include <vector>
 #include <queue>
 
-#define CAPACITY_ENTITIES 0xFFFFFF 
+#define CAPACITY_ENTITIES 0x00FFFFFF 
 #define GENERATION_BIT 24
 
 #define GET_GENERATION(id) ((id & 0xFF000000) >> GENERATION_BIT)

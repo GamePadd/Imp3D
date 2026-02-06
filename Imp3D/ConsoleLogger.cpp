@@ -21,6 +21,6 @@ namespace Imp {
 					<< local_time->tm_hour << ":"
 					<< local_time->tm_min << ":"
 					<< local_time->tm_sec
-					<< "][" << log_type_string << "] " << str << std::endl;
+					<< "][" << log_type_string << "/Imp3D] " << str << std::endl;
 	}
 }

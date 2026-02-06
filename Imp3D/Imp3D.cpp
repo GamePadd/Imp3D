@@ -6,10 +6,13 @@
 #include "ConsoleLogger.h"
 
 int main() {
-
-	Imp::entity_id player_entity = Imp::create_entity();
 	Imp::ConsoleLogger& Logger = Imp::ConsoleLogger::Instance();
 
-	Logger.Log("Spawned Entity: " + std::to_string(player_entity), Imp::LOG::INFO);
+	Imp::entity_id player_entity = Imp::create_entity();
+	player_entity = Imp::create_entity();
+	Imp::destroy_entity(player_entity);
+	player_entity = Imp::create_entity();
+	player_entity = Imp::create_entity();
+
 	return 0;
 }
