@@ -1,16 +1,20 @@
 ﻿set(SOURCES 
 	"Imp3D.cpp"
-	"Entities.cpp"
-	"Components.cpp"
-	"Systems.cpp"
+	"ECS_World/Entities.cpp"
+	"ECS_World/ComponentBase.cpp"
+	"ECS_World/ComponentClass.cpp"
+	"ECS_World/Systems.cpp"
+	"ECS_World/World.cpp"
 	"ConsoleLogger.cpp"
 )
 
 set(HEADERS
 	"Imp3D.h"
-	"Entities.h"
-	"Components.h"
-	"Systems.h"
+	"ECS_World/Entities.h"
+	"ECS_World/ComponentBase.h"
+	"ECS_World/ComponentClass.h"
+	"ECS_World/Systems.h"
+	"ECS_World/World.cpp"
 	"ConsoleLogger.h"
 )
 

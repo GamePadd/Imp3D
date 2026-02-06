@@ -1,7 +1,6 @@
 #include "ConsoleLogger.h"
 
 namespace Imp {
-
 	ConsoleLogger& ConsoleLogger::Instance() {
 		static ConsoleLogger logger;
 		return logger;
