@@ -7,7 +7,7 @@ namespace Imp {
 		private:
 			std::vector<T> components{ {} };
 		public:
-			T* create(entity_id entity, T component) {
+			T* Create(entity_id entity, T component) {
 				if (last_component == MAX_ENTITIES - 1) {
 					ConsoleLogger::Instance().Log("Error, can't create Component, limit reached!", LOG::ERROR);
 					return nullptr;
@@ -32,7 +32,7 @@ namespace Imp {
 
 			}
 
-			T* get_component(entity_id entity) {
+			T* GetComponent(entity_id entity) {
 				uint32_t entity_id = GET_INDEX(entity);
 				uint8_t entity_generation = GET_GENERATION(entity);
 				generational_ptr component_pointer = entity_to_component[entity_id];
@@ -47,7 +47,7 @@ namespace Imp {
 
 			void(*destroy_function)(T*);
 
-			void destroy(entity_id entity) {
+			void Destroy(entity_id entity) {
 				uint32_t entity_to_destroy_index = GET_INDEX(entity);
 				generational_ptr component_pointer = entity_to_component[entity_to_destroy_index];
 				if (component_pointer.generation != GET_GENERATION(entity)) {
@@ -81,7 +81,7 @@ namespace Imp {
 				ConsoleLogger::Instance().Log("Removed component", LOG::INFO);
 			}
 
-			void free() {
+			void Free() {
 				if (destroy_function == NULL) {
 					components.clear();
 					ConsoleLogger::Instance().Log("All components cleared!", LOG::INFO);

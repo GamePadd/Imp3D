@@ -2,7 +2,7 @@
 #include "../ConsoleLogger.h"
 
 namespace Imp {
-	entity_id ComponentBase::get_entity(uint32_t component) {
+	entity_id ComponentBase::GetEntity(uint32_t component) {
 		uint32_t component_index = GET_INDEX(component);
 		uint8_t component_generation = GET_GENERATION(component);
 
@@ -15,7 +15,7 @@ namespace Imp {
 		return entity_pointer.id;
 	}
 
-	bool ComponentBase::has_component(entity_id entity) {
+	bool ComponentBase::HasComponent(entity_id entity) {
 		uint32_t entity_id = GET_INDEX(entity);
 		uint8_t entity_generation = GET_GENERATION(entity);
 
